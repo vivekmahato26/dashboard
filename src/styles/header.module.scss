@@ -1,0 +1,53 @@
+.header{
+  position: fixed;
+  z-index: 1;
+}
+.nav {
+  // max-width: 100%;
+  width: 100vw;
+  height: fit-content;
+  background-color: #000222;
+  padding: 1rem 6rem 1rem 2rem;
+  display: flex;
+  align-items: center;
+  column-gap: 5rem;
+  justify-content: space-between;
+  .logo {
+    height: 3rem;
+  }
+  .magnet {
+    position: absolute;
+    height: 2.5rem;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .logoSearch {
+    display: flex;
+    column-gap: 5rem;
+    align-items: center;
+  }
+  input {
+    width: 30rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    padding: 0rem 3rem;
+    background-color: #EFEFEF;
+    outline: none;
+    border: none;
+    border-radius: 0.1rem;
+  }
+
+  .settings {
+    background-color: white;
+    border-radius: 2rem;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    column-gap: 0.5rem;
+  }
+  .gender,
+  .set {
+    height: 2rem;
+    cursor: pointer;
+  }
+}

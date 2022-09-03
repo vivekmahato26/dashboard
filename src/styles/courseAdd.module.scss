@@ -1,0 +1,142 @@
+.courseContainer, .batchContainer{
+    padding-top: 6rem;
+    padding-left: 7rem;
+}
+.courseNav{
+    width: 100%;
+    height: 20%;
+    background-color: black;
+}
+.logoPng{
+    background-color: black;
+    width: 20%;
+}
+.courseDetailContainer{
+    width: 100%;
+
+}
+.courseDetailBoxContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding-top: 1rem;
+    padding-right: 4rem;
+}
+.courseDetailBox{
+    width: 21.6rem;
+    height: 13rem;
+    background-color: #EFEFEF;
+    border: 1.5px solid #AEAAA9;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+}
+.courseHeading{
+    font-size: 1.7rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: #010044;
+    margin-bottom: 0.5rem;
+}
+.courseText{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #010044;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+.courseButton{
+    background-color: #010044;
+    display: flex;
+    float: right;
+    color: white;
+    margin-right: 5rem;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+.modalBody{
+    position: fixed;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.416);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.modalContainer{
+    width: 25rem;
+    height: 11rem;
+    padding: 1rem;
+    background-color: #EFEFEF;
+    border: 1.5px solid #A7A7A7;
+    border-radius: 0.8rem;
+    span{
+        padding-top: 0.25rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+.lableDescription{
+    margin-right: 1rem;
+}
+.lineDiv{
+    margin: 0.5rem 0rem;
+    display: flex;
+    label{
+        margin-right: 2rem;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}
+.inputTitle{
+    font-size: 0.9rem;
+    width: 16rem;
+    padding-left: 0.4rem;
+    background-color: #D3CFCE;
+    border: 1px solid;
+    outline: none;
+}
+.inputDescription{
+    padding-right: 4rem;
+    margin-left: 0.4rem;
+    padding-bottom: 4rem;
+    background-color: #D3CFCE;
+    outline: none;
+    border: 1px solid;
+}
+.inputMode{
+    background-color: #D3CFCE;
+}
+.spanMode{
+    margin-right: 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.courseCloseButton{
+    background-color: #010044;
+    color: white;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    border: none;
+    height: 2rem;
+    width: 7rem;
+}
+.buttonsDiv{
+    display: flex;
+}

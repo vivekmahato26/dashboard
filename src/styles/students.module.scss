@@ -1,0 +1,62 @@
+.studentContainerMain{
+  padding-left: 6rem;
+  padding-top: 6rem;
+}
+.studentContainer {
+  margin: 3rem 0rem 0rem 2rem;
+  overflow: scroll;
+  height: 70vh;
+}
+th {
+  border: 1px solid #eeeeee;
+  width: 11rem;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem 0rem;
+}
+
+td {
+  div {
+    width: 10.8rem;
+    overflow: hidden;
+    padding: 0.5rem 0rem;
+  }
+}
+tr {
+  border: 1px solid #eeeeee;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.fade {
+  background-color: #efefef;
+}
+.tableHeading {
+  background-color: #000222;
+  border: 1px solid #eeeeee;
+  color: white;
+  left: 0;
+  top: 0;
+  position: sticky;
+}
+.excel {
+  color: white;
+  background-color: #000222;
+  width: fit-content;
+  padding: 0.5rem 1.8rem;
+  font-weight: 800;
+  border-radius: 2rem;
+  float: right;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.table:nth-child(even) {
+  background-color: #efefef;
+  tr,
+  td {
+    border: 1px solid white;
+  }
+}

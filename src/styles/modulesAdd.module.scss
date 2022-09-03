@@ -1,0 +1,207 @@
+.moduleContainer{
+    padding-top: 6rem;
+    padding-left: 7rem;
+    color: #0A052F;
+}
+.moduleGrid{
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+}
+.moduleLeft{
+    border-right: 1px solid;
+    height: 100%;
+}
+.moduleHeader{
+    // width: 50rem;
+    // height: 50rem;
+    img{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: 0.4rem;
+        background-color: #fff;
+        margin-left: 1rem;
+    }
+}
+.moduleHeader{
+    display: flex;
+    gap: 1rem;
+}
+.headerTextArrow{
+    font-weight: 400;
+}
+.moduleButton{
+    display: flex;
+    float: right;
+    background-color: #EEEEEE;
+    border-radius: 0.3rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    border: 1.5px solid #C6C6C6;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+.modulesDiv{
+    margin-top: 6rem;
+}
+
+
+
+
+
+
+
+
+
+.modalBody{
+    position: fixed;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.416);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.modalContainer{
+    border: 1.5px solid;
+    width: 25rem;
+    height: 13rem;
+    padding: 1rem;
+    background-color: #EFEFEF;
+    span{
+        padding-top: 0.25rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+.lableName{
+    margin-right: 4.2rem;
+}
+.lableMode{
+    margin-right: 3.2rem;
+}
+.lableDescription{
+    margin-right: 1rem;
+}
+.lineDiv{
+    margin: 0.5rem 0rem;
+    display: flex;
+}
+.inputTitle{
+    // padding-bottom: 4rem;
+    padding-right: 4rem;
+    background-color: #D3CFCE;
+    border: 1px solid;
+    outline: none;
+}
+.inputDescription{
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+    margin-left: 0.4rem;
+    background-color: #D3CFCE;
+    border: 1px solid;
+    outline: none;
+}
+.inputDescriptionSection{
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+    margin-left: 0.4rem;
+    background-color: #D3CFCE;
+}
+.inputMode{
+    background-color: #D3CFCE;
+}
+.spanMode{
+    margin-right: 1rem;
+}
+.moduleCloseButton{
+    background-color: #010044;
+    color: white;
+    margin-left: 5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    border-radius: 0.8rem;
+}
+.buttonsDiv{
+    display: flex;
+}
+
+
+
+
+//Module Right
+
+
+.sectionWrapper{
+    background-color: #EEEEEE;
+    border: 1.5px solid #C6C6C6;
+    margin-left: 2rem;
+    padding-left: 2rem;
+    height: 8rem;
+    width: 10rem;
+}
+
+.Heading{
+    background-color: #EFEFEF;
+    border-radius: 1rem;
+    width: 85%;
+    font-weight: 700;
+    // text-align: center;
+    height: 2.2rem;
+    padding-top: 0.2rem;
+    padding-left: 8.5rem;
+    border: 1.5px solid #AEAAA9;
+    cursor: pointer;
+    p {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+.headerText{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.sectionContainer{
+    width: 15rem;
+    height: fit-content;
+    margin: 1rem 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: #EEEEEE;
+    border: 1.5px solid #AEAAA9;
+    color: black;
+    cursor: pointer;
+    p{
+        color: #0A052F;
+        margin: 0rem;
+    }
+}
+.moduleBtnDiv{
+    margin-left: 3rem;
+    padding-top: 1rem;
+}
+.sectionBtn{
+    margin: 1rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+.sectionLink{
+    cursor: pointer;
+}
+.modalBody{
+    position: absolute;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.416);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}

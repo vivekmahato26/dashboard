@@ -1,0 +1,87 @@
+.ticketsPage{
+  padding-left: 6.5rem;
+  padding-top: 6.5rem;
+}
+.TicketType {
+  display: flex;
+  justify-content: center;
+  column-gap: 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  div {
+    border: 1px solid #d2cfce;
+    background-color: #d2cfce;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  div:hover {
+    background-color: #7fcabe;
+  }
+}
+hr {
+  width: 96%;
+}
+
+.ticketsTable {
+  padding: 1rem 4rem 3rem 4rem;
+}
+.ticketHeading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding-bottom: 3rem;
+}
+.th {
+  border: 1px solid #efefef;
+  background-color: #000222;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 1rem 0rem;
+  width: 11rem;
+}
+.query {
+  width: 33rem;
+  border: 1px solid #efefef;
+  background-color: #000222;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 1rem 0rem;
+}
+.id {
+  width: 3rem;
+  border: 1px solid #efefef;
+  background-color: #000222;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 1rem 0rem;
+}
+.tr,
+.td {
+  div {
+    overflow: hidden;
+  }
+  border: 1px solid #efefef;
+
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 0rem 0rem;
+  width: 11rem;
+}
+tr:nth-child(even) {
+  background-color: #efefef;
+}
+
+.fade {
+  border: 1px solid #efefef;
+  background-color: #efefef;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 1rem 0rem;
+  width: 15rem;
+}

@@ -1,0 +1,156 @@
+.sectionContainer{
+    padding-top: 7rem;
+    padding-left: 10rem;
+}
+.sectionGrid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.sectionRightGrid{
+    height: fit-content;
+    width: 90%;
+    // padding: 2rem;
+    padding-right: 0rem;
+    font-weight: 500;
+    background-color: #aeaaab73;
+    margin-bottom: 2rem;
+    .projectTitle{
+        margin-bottom: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+    }
+    label{
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+        font-weight: 500;
+    }
+    input{
+        width: 88%;
+        border: none;
+        // background-color: #EFEFEF;
+    }
+    .objectivesLabel{
+        margin-right: 0.3rem;
+    }
+    .taskInput{
+        height: 8rem;
+    }
+    .taskButton{
+        float: right;
+        margin-right: 4rem;
+        font-weight: 500;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-size: 0.85rem;
+    }
+    .projectImageDiv{
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr;
+        width: 90%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        label{
+            margin-right: -5rem;
+        }
+    }
+}
+.sectionRightContainer{
+    margin: 2rem;
+}
+.sectionRightContainerNone{
+    margin: 0rem;
+}
+.addTaskTextArea{
+    resize: none;
+    width: 88%;
+}
+.projectImageDiv{
+    display: flex;
+    margin-top: 2rem;
+    width: 50%;
+}
+.uploadButton{
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    height: 2rem;
+    width: 5rem;
+}
+.uploadImageLabel{
+    width: 10rem;
+}
+.saveButton{
+    background-color: #292A4A;
+    border: none;
+    float: right;
+    margin-right: 4rem;
+    color: white;
+    border-radius: 1rem;
+    width: 3.5rem;
+    font-size: 1rem;
+    padding-bottom: 0.3rem;
+    cursor: pointer;
+}
+.fileImageInput::before{
+    content: '+';
+    display: inline-block;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    outline: none;
+  //   white-space: nowrap;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+  .fileImageInput:hover::before {
+      border-color: black;
+  }
+  .fileImageInput::-webkit-file-upload-button {
+      visibility: hidden;
+  }
+  .fileImageInput{
+      width: 2rem;
+  }
+
+
+  //Accodion
+
+.accodionText{
+    background-color: #fff;
+    height: 1.5rem;
+    padding: 0rem 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-right: 0.8rem;
+    overflow-y: hidden;
+    position: relative;
+    p{
+        margin: 0rem;
+    }
+}
+  .accodionIcon{
+    height: 1rem;
+    width: 0.8rem;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.5rem;
+    cursor: pointer;
+}
+.sectionDetailBox{
+    position: relative;
+}
+.accodionAddBtnContainer{
+    display: flex;
+    height: 1.8rem;
+    width: 100%;
+    justify-content: right;
+}
+.accodionAddBtn{
+    border-radius: 0.8rem;
+    border: 1px solid;
+    width: 4rem;
+    cursor: pointer;
+}

@@ -1,0 +1,148 @@
+.profileContainer {
+  padding: 1.6rem 4rem 0rem 4rem;
+
+  overflow: scroll;
+}
+.scroll {
+  height: 45rem;
+  overflow: scroll;
+}
+.studentDetails {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  img {
+    float: right;
+    height: 2rem;
+    transition: 1s;
+    position: relative;
+  }
+}
+hr {
+  border: 0.2px solid rgba(170, 169, 169, 0.466);
+  width: 100%;
+}
+.detailsBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem 0rem;
+  column-gap: 2rem;
+  img {
+    height: 8rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    label {
+      font-size: 1.3rem;
+    }
+  }
+
+  input {
+    background-color: #efefef;
+    border: none;
+    border-radius: 0.7rem;
+    height: 2.35rem;
+    width: 21rem;
+    margin-bottom: 1.5rem;
+    padding: 0rem 1rem;
+    font-size: 1.3rem;
+  }
+  .addressInput {
+    height: 8rem;
+    background-color: #efefef;
+    width: 21rem;
+    border-radius: 0.7rem;
+    padding: 0rem 1rem;
+    font-size: 1.3rem;
+  }
+
+  .right {
+    .first {
+      border: 1px solid rgba(170, 169, 169, 0.466);
+      border-radius: 0.5rem;
+    }
+    .heading {
+      font-size: 1.2rem;
+      padding: 1rem 1rem;
+      font-weight: 700;
+      span {
+        float: right;
+        padding: 0rem 2rem 0rem 0rem;
+        cursor: pointer;
+      }
+    }
+    .card {
+      padding: 1rem 1rem;
+      label {
+        font-size: 1.3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // row-gap: 0.2rem;
+      }
+    }
+  }
+}
+
+.ticketsTable {
+  padding: 1rem 4rem 3rem 4rem;
+}
+.ticketHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 3rem;
+}
+.th {
+  border: 1px solid #efefef;
+  background-color: #000222;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 1rem 0rem;
+  width: 11rem;
+}
+.query {
+  width: 33rem;
+  border: 1px solid #efefef;
+  background-color: #000222;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 1rem 0rem;
+}
+.id {
+  width: 3rem;
+  border: 1px solid #efefef;
+  background-color: #000222;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 1rem 0rem;
+}
+.tr,
+.td {
+  div {
+    overflow: hidden;
+  }
+  border: 1px solid #efefef;
+
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 0rem 0rem;
+  width: 11rem;
+}
+tr:nth-child(even) {
+  background-color: #efefef;
+}
+
+.fade {
+  border: 1px solid #efefef;
+  background-color: #efefef;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 1rem 0rem;
+  width: 15rem;
+}

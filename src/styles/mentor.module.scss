@@ -1,0 +1,125 @@
+.MentorContainer {
+  height: 45rem;
+  width: 90%;
+  overflow: scroll;
+}
+.MentorM {
+  overflow: scroll;
+  padding-left: 7rem;
+  padding-top: 6rem;
+}
+.MentorName {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+hr {
+  max-width: 100%;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  img {
+    height: 8rem;
+  }
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  column-gap: 2rem;
+  padding-top: 2rem;
+}
+.label {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
+  font-size: 1.2rem;
+  img {
+    position: absolute;
+    height: 1.5rem;
+    margin: 0.5rem 0rem 0rem 18rem;
+  }
+  input {
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #efefef;
+  }
+  .addressInput {
+    height: 14rem;
+  }
+  .courseInput {
+    width: 8rem;
+    position: relative;
+  }
+}
+
+select,
+option {
+  width: 15rem;
+  height: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  background-color: #efefef;
+  margin-top: 1rem;
+}
+
+.ticketsTable {
+  padding: 1rem 4rem 3rem 4rem;
+}
+.ticketHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 3rem;
+}
+.th {
+  border: 1px solid #efefef;
+  background-color: #000222;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 1rem 0rem;
+  width: 11rem;
+}
+.query {
+  width: 33rem;
+  border: 1px solid #efefef;
+  background-color: #000222;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 1rem 0rem;
+}
+.id {
+  width: 3rem;
+  border: 1px solid #efefef;
+  background-color: #000222;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 1rem 0rem;
+}
+.tr,
+.td {
+  div {
+    overflow: hidden;
+  }
+  border: 1px solid #efefef;
+
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 0rem 0rem;
+  width: 11rem;
+}
+tr:nth-child(even) {
+  background-color: #efefef;
+}
+
+.fade {
+  border: 1px solid #efefef;
+  background-color: #efefef;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 1rem 0rem;
+  width: 15rem;
+}

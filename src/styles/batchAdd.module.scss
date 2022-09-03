@@ -1,0 +1,139 @@
+.batchContainer{
+    padding-top: 6rem;
+    padding-left: 6.5rem;
+}
+.batchNav{
+    width: 100%;
+    height: 20%;
+    background-color: black;
+}
+.logoPng{
+    background-color: black;
+    width: 20%;
+}
+.batchDetailContainer{
+    width: 100%;
+
+}
+.batchDetailBoxContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.batchDetailBox{
+    width: 17rem;
+    height: 27rem;
+    background-color: #EFEFEF;
+    border: 1.5px solid #AEAAA9;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+
+}
+.batchHeading{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #010044;
+    margin-top: 0rem;
+}
+.batchText{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #010044;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    p{
+        // width: 10rem;
+        margin: 0rem;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        font-weight: 700;
+    }
+    p:nth-child(odd) {
+        width: 10rem;
+      }
+}
+.batchButton{
+    background-color: #010044;
+    display: flex;
+    float: right;
+    color: white;
+    margin-right: 5rem;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+.modalBody{
+    position: fixed;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.416);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.modalContainer{
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    background-color: #EFEFEF;
+    border: 1.5px solid #A7A7A7;
+    border-radius: 0.8rem;
+
+}
+// .lableName{
+//     margin-right: 4.2rem;
+// }
+// .lableMode{
+//     margin-right: 3.2rem;
+// }
+.lableDescription{
+    margin-right: 1rem;
+}
+.lineDiv{
+    margin: 0.5rem 0rem;
+    text-align: left;
+    label{
+        font-size: 1rem;
+        font-weight: 500;
+        padding-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+.inputTitle{
+    // padding-bottom: 4rem;
+    // padding-right: 4rem;
+    background-color: #D3CFCE;
+    outline: none;
+    border: none;
+    height: 1.5rem;
+}
+
+.spanMode{
+    margin-right: 1rem;
+}
+.batchCloseButton{
+    background-color: #010044;
+    color: white;
+    margin-left: 4rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    border: none;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: 6rem;
+}
