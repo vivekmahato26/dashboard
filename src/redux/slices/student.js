@@ -16,7 +16,7 @@ const studentSlice = new createSlice({
 });
 
 export const getStudents = createAsyncThunk("/getStudents", async () => {
-  const response = await Axios.post("http://localhost:4000/", {
+  const response = await Axios.post("https://graphql.temanedtech.com/", {
     query: getStudentsQuery,
   });
   const data = response.data.data.students;

@@ -55,7 +55,7 @@ console.log(moduleHead._id);
     
     // const getVideoCred = async(videoId) => {
     //     try {
-    //         const data = await axios.post("http://localhost:4000/getVideoOTP",{videoId});
+    //         const data = await axios.post("https://graphql.temanedtech.com/getVideoOTP",{videoId});
     //         console.log(data);
     //     } catch (error) {
             

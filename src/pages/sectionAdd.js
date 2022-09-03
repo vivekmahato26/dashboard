@@ -38,7 +38,7 @@ export default function SectionAdd() {
   const getCreds = async () => {
     // console.log(fileRef)
     try{
-      const CredData = await axios.post("http://localhost:4000/getCreds", {
+      const CredData = await axios.post("https://graphql.temanedtech.com/getCreds", {
       fileName: fileRef.current.files[0].name,
       folderId: "3a62c56b6bae4b36bb18de1415bb59f0",
     });

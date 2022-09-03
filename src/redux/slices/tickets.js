@@ -23,7 +23,7 @@ const ticketsSlice = createSlice({
 });
 
 export const getTickets = createAsyncThunk("/getTickets", async () => {
-  const response = await Axios.post("http://localhost:4000/", {
+  const response = await Axios.post("https://graphql.temanedtech.com/", {
     query: getTicketsQuery,
   });
   const data = response.data.data.tickets;
