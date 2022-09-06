@@ -60,6 +60,7 @@ query Query {
       createdAt
       updatedAt
     }
+    courseID
     createdAt
     updatedAt
   }
@@ -78,3 +79,43 @@ mutation addModules($input: ModulesInput) {
   }
 }
 `
+
+export const getModuleByCourse = `
+query getModulesByCourse($courseId: String) {
+  getModulesByCourse(courseId: $courseId) {
+    
+      _id
+      title
+      createdAt
+      updatedAt
+      courseID
+      Challenge {
+        _id
+        project
+        tasks
+        objective
+        title
+        description
+        images
+        solution
+        hints
+        test_cases
+        createdAt
+        updatedAt
+      }
+      Project {
+        _id
+        projectSerialNo
+        tasks
+        title
+        description
+        createdAt
+        updatedAt
+     
+    }
+    SectionTitle {
+      _id
+      title
+    }
+  }
+}`;

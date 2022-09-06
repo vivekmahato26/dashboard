@@ -16,7 +16,7 @@ const mentorsSlice = new createSlice({
 });
 
 export const getMentors = createAsyncThunk("/getMentors", async () => {
-  const response = await Axios.post("https://graphql.temanedtech.com/", {
+  const response = await Axios.post("https://graphql.temanedtech.com//", {
     query: getMentorsQuery,
   });
   const data = response.data.data.mentors;

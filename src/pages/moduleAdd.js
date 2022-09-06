@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import styles from "../styles/modulesAdd.module.scss"
-import { getModules,addModules } from "../redux/slices/module"
+import { getModules,addModules,getModulesByCourse } from "../redux/slices/module"
 
 import { getSections } from "../redux/slices/section"
-import { getSectionTitles,addSectionTitles } from "../redux/slices/sectionTitle"
+import { addSectionTitles,getSectionTitlesByModule } from "../redux/slices/sectionTitle"
 import { getChallenge,addChallenge } from "../redux/slices/challenge"
 import { getProject,addProject } from "../redux/slices/project"
 
@@ -27,16 +27,15 @@ export default function ModuleAdd() {
     // for module function state
     const [inputData, setInputData] = useState('')
     //  for sectionTitle function state
-    const [text, setText] = useState('Click on module to display Section')
+    const [text, setText] = useState(0)
     //  for section function state
     const [sectionText, sectionSetText] = useState('')
     const dispatch = useDispatch();
 
     const location = useLocation()
-    const module = location.state.module.modules
-    const moduleHeading = location.state.module.course_name
-    const moduleHead = location.state.module
-console.log(moduleHead._id);
+    const moduleHeading = location.state.course.course_name
+    const course = location.state.course
+    const module = useSelector(state => state.modules.getModulesByCourse);
     
     
     const toggleModal = () => {
@@ -52,30 +51,19 @@ console.log(moduleHead._id);
         setModalChallege(!modalChallenge)
     }
     
-    
-    // const getVideoCred = async(videoId) => {
-    //     try {
-    //         const data = await axios.post("https://graphql.temanedtech.com/getVideoOTP",{videoId});
-    //         console.log(data);
-    //     } catch (error) {
-            
-    //     }
-    // }
     useEffect(() => { dispatch(getModules()) }, [])
     
     useEffect(() => { dispatch(getSections()) }, [])
-    // useEffect(() => { getVideoCred() }, [])
-    
-    
-    const modules = useSelector((state) => state.modules.value)
-    // const sectionTitle = useSelector((state) => state.sectionTitle.value)
-    const sectionTitleAdd = useSelector((state) => state.sectionTitle.add)
+    useEffect(() => { dispatch(getModulesByCourse({courseId: course._id})) }, [])
+
+    const sectionTitles = useSelector((state) => state.sectionTitle.value)
     const challengeAdd = useSelector((state) => state.challenge.add)
     const projectAdd = useSelector((state) => state.project.add)
     
     // For module click function
-    const h = (c) => {
-        setText(c)
+    const getSectionTitles = (c) => {
+        setText(c);
+       dispatch(getSectionTitlesByModule({moduleId: c._id}))
     }
     // console.log(text._id);
 
@@ -89,18 +77,11 @@ console.log(moduleHead._id);
     // For Module adding
 
     const addTitle = () => {
-        console.log(inputData);
         dispatch(addModules({
           input : {
             title: inputData,
-            courseID : moduleHead._id
-        }}));
-        const res = modules.addModules.__typename;
-        if(res === "res") {
-        dispatch(getModules());
-        } else {
-        console.log(modules.addModules)
-        }
+            courseID : course._id
+        },dispatch}));
         toggleModal();  
     }
 
@@ -111,16 +92,9 @@ console.log(moduleHead._id);
         dispatch(addSectionTitles({
           input : {
             title: inputData,
-            moduleID : text._id
+            moduleID : text._id,
         }}));
-        const res = sectionTitleAdd.addSectionTitle.__typename;
-        console.log(res);
-        if(res === "res") {
-        dispatch(getModules());
-        } else {
-        console.log(modules.addModules)
-        }
-        toggleModal();  
+        toggleSectionTitleModal();  
     }
 
     // For Challenge Adding
@@ -132,13 +106,6 @@ console.log(moduleHead._id);
             title: inputData,
             moduleID : text._id
         }}));
-        const res = challengeAdd.addChallenge.__typename;
-        
-        if(res === "res") {
-        dispatch(getModules());
-        } else {
-        console.log(modules.addModules)
-        }
         toggleModal();  
     }
 
@@ -152,13 +119,6 @@ console.log(moduleHead._id);
             title: inputData,
             moduleID : text._id
         }}));
-        const res = projectAdd.addProject.__typename;
-        
-        if(res === "res") {
-        dispatch(getModules());
-        } else {
-        console.log(modules.addModules)
-        }
         toggleProjectModal();  
     }
 
@@ -174,9 +134,9 @@ console.log(moduleHead._id);
 
                 <div className={styles.moduleLeft}>
 
-                    <button onClick={toggleModal} className={styles.moduleButton}>Add Module</button>
+                    <button onClick={toggleSectionTitleModal} className={styles.moduleButton}>Add Module</button>
 
-                    {modal && (
+                    {modalSection && (
                         <div className={styles.modalBody}>
                             <div className={styles.modalContainer}>
 
@@ -194,7 +154,7 @@ console.log(moduleHead._id);
 
                                 <div className={styles.buttonsDiv}>
                                     <button onClick={() => {addTitle()}} className={styles.moduleCloseButton}>Add Module</button>
-                                    <button onClick={() => {toggleModal()}} className={styles.moduleCloseButton}>Close</button>
+                                    <button onClick={() => {toggleSectionTitleModal()}} className={styles.moduleCloseButton}>Close</button>
                                 </div>
 
                             </div>
@@ -206,12 +166,11 @@ console.log(moduleHead._id);
                     <div className={styles.modulesDiv}>
 
                         {module && module.map((c) => {
-                            console.log(c)
                             return (
 
                                 <div className={styles.DetailBox}>
                         
-                                    <p className={styles.Heading} onClick={() => h(c)} >{c.title}</p>
+                                    <p className={styles.Heading} onClick={() => getSectionTitles(c)} >{c.title}</p>
 
                                 </div>
 
@@ -329,10 +288,10 @@ console.log(moduleHead._id);
 
                     <div className={styles.sectionRenderDiv}>
 
-                        {text.SectionTitle ? text.SectionTitle.map( (s) =>
+                        {sectionTitles ? sectionTitles.map( (s) =>
                             <div className={styles.sectionContainer}>
 
-                                <Link className={styles.sectionLink} to={"/section"} state={{sections: text.SectionTitle}}>      
+                                <Link className={styles.sectionLink} to={"/section"} state={{moduleId:text._id}}>      
 
                                     <div >
 
@@ -344,7 +303,7 @@ console.log(moduleHead._id);
 
                             </div>
 
-                        ) : <div className={styles.sectionContainer}>{text}</div>}
+                        ) : <div className={styles.sectionContainer}>Click on module to display Section</div>}
 
                     </div>
 

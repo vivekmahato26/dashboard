@@ -38,3 +38,29 @@ mutation addSection($input: SectionInput) {
   }
 }
 `
+
+export const getSectionBySectionTitle = `query GetSectionBySectionTitle($sectionTitleId: String) {
+  getSectionBySectionTitle(sectionTitleId: $sectionTitleId) {
+    _id
+    video
+    sourceCode {
+      type
+      code
+    }
+    image
+    title
+    about {
+      title
+      description
+      subDesc
+    }
+    resources {
+      type
+      url
+    }
+    videoId
+    createdAt
+    updatedAt
+    sectionTitleID
+  }
+}`;

@@ -49,3 +49,38 @@ mutation addSectionTitle($input: SectionTitleInput) {
   }
 }
 `
+
+export const getSectionTitleByModule = `query GetSectionTitleByModule($moduleId: String) {
+  getSectionTitleByModule(moduleId: $moduleId) {
+    _id
+    title
+    createdAt
+    sectionType
+    updatedAt
+    description
+    moduleID
+    Section {
+      _id
+      video
+      sourceCode {
+        type
+        code
+      }
+      image
+      title
+      about {
+        title
+        description
+        subDesc
+      }
+      resources {
+        type
+        url
+      }
+      videoId
+      createdAt
+      updatedAt
+      sectionTitleID
+    }
+  }
+}`;

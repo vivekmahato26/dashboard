@@ -115,7 +115,7 @@ export default function CourseAdd() {
 
               
             
-              <Link to={"/module"+c._id} state={{module : c}}>
+              <Link to={"/module"+c._id} state={{course : c}}>
                 <div className={styles.courseDetailBox} >
                   <p className={styles.courseHeading}>{c.course_name}</p>
 
