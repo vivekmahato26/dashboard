@@ -224,7 +224,7 @@ export default function SectionAdd() {
                           </label>
 
                           <form
-                            action={creds.clientPayload ? creds.clientPayload.uploadLink : "#"}
+                            action="https://vdo-ap-southeast.s3-accelerate.amazonaws.com"
                             method="post"
                             enctype="multipart/form-data"
                           >
