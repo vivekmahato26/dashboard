@@ -281,8 +281,8 @@ export default function SectionAdd() {
                               type="file"
                               onChange={getCreds}
                             />
-                            {/* <button className={styles.uploadButton} onClick= {uploadVideo}>Upload</button> */}
-                            <input type="submit" name="submit" value="Upload" />
+                            <button className={styles.uploadButton} type="submit" >Upload</button>
+                            {/*<input type="submit" name="submit" value="Upload" />*/}
                           </form>
                         </div>
                         <div className={styles.projectImageDiv}>
