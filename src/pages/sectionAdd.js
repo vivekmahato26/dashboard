@@ -224,7 +224,7 @@ export default function SectionAdd() {
                           </label>
 
                           <form
-                            action={"#"}
+                            action={creds.clientPayload ? creds.clientPayload.uploadLink : "#"}
                             method="post"
                             enctype="multipart/form-data"
                           >
