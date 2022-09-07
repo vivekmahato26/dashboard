@@ -134,9 +134,9 @@ export default function ModuleAdd() {
 
                 <div className={styles.moduleLeft}>
 
-                    <button onClick={toggleSectionTitleModal} className={styles.moduleButton}>Add Module</button>
+                    <button onClick={toggleModal} className={styles.moduleButton}>Add Module</button>
 
-                    {modalSection && (
+                    {modal && (
                         <div className={styles.modalBody}>
                             <div className={styles.modalContainer}>
 
@@ -154,7 +154,7 @@ export default function ModuleAdd() {
 
                                 <div className={styles.buttonsDiv}>
                                     <button onClick={() => {addTitle()}} className={styles.moduleCloseButton}>Add Module</button>
-                                    <button onClick={() => {toggleSectionTitleModal()}} className={styles.moduleCloseButton}>Close</button>
+                                    <button onClick={() => {toggleModal()}} className={styles.moduleCloseButton}>Close</button>
                                 </div>
 
                             </div>
